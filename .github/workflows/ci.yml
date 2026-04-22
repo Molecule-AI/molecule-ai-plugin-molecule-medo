@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    uses: Molecule-AI/molecule-ci/.github/workflows/validate-plugin.yml@main
