@@ -39,8 +39,12 @@ if errors:
         print(f"::error::{e}")
     sys.exit(1)
 
-print(f"✓ plugin.yaml valid: {plugin[\"name\"]} v{plugin[\"version\"]}")
+name_val = plugin["name"]
+version_val = plugin["version"]
+print(f"✓ plugin.yaml valid: {name_val} v{version_val}")
 if found:
-    print(f"  Content: {\", \".join(found)}")
+    content_str = ", ".join(found)
+    print(f"  Content: {content_str}")
 if runtimes:
-    print(f"  Runtimes: {\", \".join(runtimes)}")
+    runtimes_str = ", ".join(runtimes)
+    print(f"  Runtimes: {runtimes_str}")
